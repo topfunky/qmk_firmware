@@ -1,0 +1,24 @@
+name: Compile User-specific Firmware
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    container: ghcr.io/qmk/qmk_cli
+
+    steps:
+      - name: Disable safe.directory check
+        run : git config --global --add safe.directory '*'
+
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Compile firmware
+        run: qmk compile -kb keebio/iris_lm/g1 -km topfunky
