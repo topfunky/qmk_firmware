@@ -493,3 +493,8 @@ pytest:
 .PHONY: format-and-pytest
 format-and-pytest:
 	RUNTIME=docker ./util/docker_cmd.sh bash -lic "$(CONTAINER_PREAMBLE); qmk format-c --core-only -a && qmk format-python -a && qmk pytest"
+
+# My own task to format my keymap
+.PHONY: format
+format:
+	clang-format -i keyboards/keebio/iris_lm/keymaps/topfunky/keymap.c
