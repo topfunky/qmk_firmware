@@ -1,12 +1,6 @@
-// Copyright 2023 Danny Nguyen (@nooges)
-// SPDX-License-Identifier: GPL-2.0-or-later
-
 #include QMK_KEYBOARD_H
 
 enum custom_layers { _DVORAK, _L1, _L2, _L3 };
-
-// Equivalent to _______
-// _______
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -26,13 +20,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         LT(_L2, KC_D), LT(_L1, KC_H), MT(MOD_LGUI, KC_T), MT(MOD_LSFT, KC_N), KC_S, KC_MINS,
 
-        // R4  (including top thumb cluster buttons)
+        // R4 (including top thumb cluster buttons)
         KC_GRV, KC_SCLN, KC_Q, KC_J, KC_K, KC_X, HYPR(KC_NO),
 
         MEH(KC_NO), KC_B, KC_M, KC_W, KC_V, KC_Z, MO(_L1),
 
         // Thumb cluster (both sides)
-        KC_LALT, MT(MOD_LSFT, KC_TAB), KC_ENT, KC_SPC, KC_RGUI, MO(_L3), ),
+        KC_LALT, MT(MOD_LSFT, KC_TAB), KC_ENT, KC_SPC, KC_RGUI, MO(_L3)),
 
     // TODO: Resume editing here (fix the order of keys defined in the right hand half of the keyboard)
     [_L1] = LAYOUT(
