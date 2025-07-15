@@ -53,3 +53,37 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   )
 };
+
+// FIXME:Doesn't work
+layer_state_t layer_state_set_user(layer_state_t state) {
+        switch (get_highest_layer(state)) {
+     case _RAISE:
+         rgb_matrix_sethsv(200, 255, 255);
+         break;
+     case _LOWER:
+         rgb_matrix_sethsv(127, 255, 255);
+         break;
+     default: //  for any other layers, or the default layer
+         rgb_matrix_sethsv(0, 255, 255);
+         break;
+     }
+ return state;
+}
+// // Enable/disable RGB matrix
+// rgb_matrix_enable();
+// rgb_matrix_disable();
+// rgb_matrix_toggle();
+
+// // Set brightness (0-255)
+// rgb_matrix_set_color_all(r, g, b);
+
+// // Set individual LED color
+// rgb_matrix_set_color(led_index, r, g, b);
+
+// // Set HSV color for all LEDs
+// rgb_matrix_sethsv(hue, sat, val);
+
+// // Change animation modes
+// rgb_matrix_mode(mode_number);
+// rgb_matrix_step();           // Next mode
+// rgb_matrix_step_reverse();   // Previous mode
