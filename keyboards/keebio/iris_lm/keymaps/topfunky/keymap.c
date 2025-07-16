@@ -49,69 +49,73 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
         )};
 
-void set_rgblight(uint8_t hue, uint8_t sat, uint8_t val) {
-    val = rgblight_get_val();
-    rgblight_sethsv_noeeprom(hue, sat, val);
-}
-
-layer_state_t layer_state_set_user(layer_state_t state) {
-    switch (get_highest_layer(state)) {
-        case VSCODE:
-            set_rgblight(HSV_BLUE);
-            break;
-        case CUSTOM1:
-            set_rgblight(HSV_GREEN);
-            break;
-        case CUSTOM2:
-            set_rgblight(HSV_PURPLE);
-            break;
-        default: //  for any other layers, or the default layer
-            set_rgblight(HSV_RED);
-            break;
-    }
-
-    return state;
-}
-
-// https://docs.qmk.fm/features/rgb_matrix
-// HSV_CYAN HSV_ORANGE etc.
 void keyboard_post_init_user(void) {
-    rgblight_enable_noeeprom(); // enables Rgb, without saving settings
-    rgblight_mode_noeeprom(1);
+    rgb_matrix_enable_noeeprom(); // enables RGB Matrix, without saving settings
+    rgb_matrix_mode_noeeprom(1);
     layer_state_set_user(layer_state);
 }
 
-bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
-    for (uint8_t i = led_min; i < led_max; i++) {
-        switch (get_highest_layer(layer_state | default_layer_state)) {
-            case 2:
-                rgb_matrix_set_color(i, RGB_BLUE);
-                break;
-            case 1:
-                rgb_matrix_set_color(i, RGB_YELLOW);
-                break;
-            default:
-                break;
-        }
-    }
-    return false;
+void set_rgb_matrix(uint8_t hue, uint8_t sat, uint8_t val) {
+    val = rgb_matrix_get_val();
+    rgb_matrix_sethsv_noeeprom(hue, sat, val);
 }
 
-// FIXME:Doesn't work
 layer_state_t layer_state_set_user(layer_state_t state) {
     switch (get_highest_layer(state)) {
-        case _RAISE:
-            rgb_matrix_sethsv(200, 255, 255);
-            break;
         case _LOWER:
-            rgb_matrix_sethsv(127, 255, 255);
+            set_rgb_matrix(HSV_BLUE);
+            break;
+        case _RAISE:
+            set_rgb_matrix(HSV_GREEN);
             break;
         default: //  for any other layers, or the default layer
-            rgb_matrix_sethsv(0, 255, 255);
+            set_rgb_matrix(HSV_RED);
             break;
     }
+
     return state;
 }
+
+// // https://docs.qmk.fm/features/rgb_matrix
+// // HSV_CYAN HSV_ORANGE etc.
+// void keyboard_post_init_user(void) {
+//     rgblight_enable_noeeprom(); // enables Rgb, without saving settings
+//     rgblight_mode_noeeprom(1);
+//     layer_state_set_user(layer_state);
+// }
+
+// bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
+//     for (uint8_t i = led_min; i < led_max; i++) {
+//         switch (get_highest_layer(layer_state | default_layer_state)) {
+//             case 2:
+//                 rgb_matrix_set_color(i, RGB_BLUE);
+//                 break;
+//             case 1:
+//                 rgb_matrix_set_color(i, RGB_YELLOW);
+//                 break;
+//             default:
+//                 break;
+//         }
+//     }
+//     return false;
+// }
+
+// // FIXME:Doesn't work
+// layer_state_t layer_state_set_user(layer_state_t state) {
+//     switch (get_highest_layer(state)) {
+//         case _RAISE:
+//             rgb_matrix_sethsv(200, 255, 255);
+//             break;
+//         case _LOWER:
+//             rgb_matrix_sethsv(127, 255, 255);
+//             break;
+//         default: //  for any other layers, or the default layer
+//             rgb_matrix_sethsv(0, 255, 255);
+//             break;
+//     }
+//     return state;
+// }
+
 // // Enable/disable RGB matrix
 // rgb_matrix_enable();
 // rgb_matrix_disable();
