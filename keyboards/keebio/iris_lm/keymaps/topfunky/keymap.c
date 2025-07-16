@@ -3,7 +3,7 @@
 
 #include QMK_KEYBOARD_H
 
-enum custom_layers { _QWERTY, _LOWER, _RAISE };
+enum custom_layers { _QWERTY, _LOWER, _RAISE, _MEDIA };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -63,13 +63,16 @@ void set_rgb_matrix(uint8_t hue, uint8_t sat, uint8_t val) {
 layer_state_t layer_state_set_user(layer_state_t state) {
     switch (get_highest_layer(state)) {
         case _LOWER:
-            set_rgb_matrix(HSV_BLUE);
+            set_rgb_matrix(HSV_PURPLE);
             break;
         case _RAISE:
             set_rgb_matrix(HSV_GREEN);
             break;
+        case _MEDIA:
+            set_rgb_matrix(HSV_ORANGE);
+            break;
         default: //  for any other layers, or the default layer
-            set_rgb_matrix(HSV_RED);
+            set_rgb_matrix(HSV_CYAN);
             break;
     }
 
