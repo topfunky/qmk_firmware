@@ -1,0 +1,28 @@
+#pragma once
+
+#define TAPPING_TERM 250
+
+
+#undef RGBLED_NUM
+
+#define ENABLE_RGB_MATRIX_CYCLE_LEFT_RIGHT
+#define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_CYCLE_LEFT_RIGHT // Sets the default mode, if none has been set
+#define RGB_MATRIX_DEFAULT_SPD 10 // Sets the default animation speed, if none has been set
+
+
+// #define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_CYCLE_LEFT_RIGHT
+
+
+// //#define RGBLIGHT_ANIMATIONS
+// #define RGBLIGHT_EFFECT_BREATHING
+// #define RGBLIGHT_EFFECT_RAINBOW_MOOD
+// #define RGBLIGHT_EFFECT_RAINBOW_SWIRL
+// #define RGBLIGHT_RAINBOW_SWIRL_RANGE				80
+// //#define RGBLIGHT_EFFECT_SNAKE
+// //#define RGBLIGHT_EFFECT_KNIGHT
+// //#define RGBLIGHT_EFFECT_STATIC_GRADIENT
+// #define RGBLIGHT_EFFECT_CHRISTMAS
+// #define RGBLED_NUM 24
+// #define RGBLIGHT_HUE_STEP 8
+// #define RGBLIGHT_SAT_STEP 8
+// #define RGBLIGHT_VAL_STEP 8
