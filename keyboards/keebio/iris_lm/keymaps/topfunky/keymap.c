@@ -36,6 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             ),
 
     [_LOWER] = LAYOUT(
+        // TODO
         // Row 1
         KC_TRNS, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5,
 
@@ -63,6 +64,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         ),
 
     [_RAISE] = LAYOUT(
+        // TODO
         // Row 1
         KC_TRNS, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5,
 
@@ -89,6 +91,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         ),
     [_MEDIA] = LAYOUT(
+        // TODO: Maybe add QK_BOOT somewhere so the right half can be flashed
         // Row 1
         KC_TRNS, HYPR(KC_ENT), HYPR(KC_LEFT), HYPR(KC_RGHT), C(KC_UP), C(KC_DOWN),
 
@@ -130,6 +133,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     switch (get_highest_layer(state)) {
         case _LOWER:
             // Must go to mode 1 to set solid color
+            // TODO: Use `noeeprom` variants of the functions
             rgb_matrix_mode(1);
             set_rgb_matrix(HSV_CYAN);
             break;
@@ -149,6 +153,18 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 
     return state;
 }
+
+// TODO: Debug. Either holds on white or turns off all LEDs.
+// // See https://docs.qmk.fm/features/rgb_matrix#callbacks
+// bool rgb_matrix_indicators_user(void) {
+//     if (keyboard_report->mods & MOD_BIT(KC_LGUI)) {
+//         rgb_matrix_mode(1);
+//         set_rgb_matrix(HSV_WHITE);
+//         return true;
+//     }
+//     rgb_matrix_mode(RGB_MATRIX_CYCLE_LEFT_RIGHT);
+//     return false;
+// }
 
 // // Enable/disable RGB matrix
 // rgb_matrix_enable();
