@@ -17,9 +17,10 @@ RGB_MATRIX_ENABLE = yes
 # Could be interesting but throws an error about no PIN defined for the backlight.
 # BACKLIGHT_ENABLE = yes
 
+# NKRO_ENABLE = yes
+
 # Save some more memory
 MOUSEKEY_ENABLE = no
 EXTRAKEY_ENABLE = no
-NKRO_ENABLE = no
 MIDI_ENABLE = no
 
