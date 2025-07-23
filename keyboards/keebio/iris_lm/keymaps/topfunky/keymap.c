@@ -104,7 +104,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // Row 1
         _______, HYPR(KC_ENT), HYPR(KC_LEFT), HYPR(KC_RGHT), C(KC_UP), C(KC_DOWN),
 
-        _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, DT_PRNT, DT_UP, DT_DOWN,
 
         // Row 2
         _______, _______, _______, _______, _______, _______,
