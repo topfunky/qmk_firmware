@@ -37,14 +37,16 @@ A custom keymap for the Keebio Iris LM split keyboard with Dvorak layout and enh
     -   `HYPR(KC_NO)` - Hyper modifier (Ctrl+Alt+Shift+GUI)
     -   `MEH(KC_NO)` - Meh modifier (Ctrl+Alt+Shift)
 
-#### Lower Layer (implementation pending)
+#### Lower Layer
 
 -   Navigate by character
 -   Delete one character at a time (backspace, delete)
 -   Next/previous browser tab (or any app that uses tabs)
 -   Search browser tabs
+-   Zoom controls (mute microphone, turn off video, share screen, raise hand)
+-   Check off task in VSCode Todo+ Markdown plugin
 
-#### Raise Layer (implementation pending)
+#### Raise Layer
 
 -   Function keys (F1-F11)
 
@@ -63,16 +65,20 @@ A custom keymap for the Keebio Iris LM split keyboard with Dvorak layout and enh
     -   `KC_MSTP` - Stop
     -   `KC_MPLY` - Play/Pause
     -   `KC_VOLD` - Volume down
+-   Tapping term
+    -   Print current tapping term
+    -   Increment, decrement
 
 ### RGB Matrix Configuration
 
-The keymap includes sophisticated RGB matrix control.
+The keymap includes RGB matrix features.
 
 Layer-specific colors are set in `layer_state_set_user()`:
 
 -   Each layer gets a distinct color for easy identification
 -   Default layer maintains the cycle animation
 -   Other layers use solid colors when activated
+-   There are currently no colors for other modifier keys such as shift, GUI, etc.
 
 ### Build Configuration
 
