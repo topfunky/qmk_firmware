@@ -42,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_LOWER] = LAYOUT(
 
         // Row 1
-        _______, A(KC_D), S(KC_2), S(KC_3), S(KC_4), S(KC_5),
+        A(KC_D), S(KC_1), S(KC_2), S(KC_3), S(KC_4), S(KC_5),
 
         S(KC_6), S(KC_7), S(KC_8), S(KC_9), S(KC_0), KC_PGUP,
 
@@ -114,7 +114,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // Row 3
         _______, KC_MPRV, KC_MNXT, KC_VOLU, _______, _______,
 
-        _______, _______, _______, _______, _______, _______,
+        _______, LAG(KC_H), _______, _______, _______, _______,
 
         // Row 4, plus top thumb keys
         _______, KC_MSTP, KC_MPLY, KC_VOLD, _______, _______,
