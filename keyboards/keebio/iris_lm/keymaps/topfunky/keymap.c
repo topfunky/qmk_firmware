@@ -54,14 +54,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // Row 3
         LSG(KC_S), LSG(KC_H), KC_BSPC, KC_TAB, KC_DEL, G(KC_SPC),
 
-        KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC_SLSH, _______,
+        KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC_EQL, _______,
 
         // Row 4, plus top thumb keys
-        LSG(KC_A), LSG(KC_V), _______, _______, _______, LSG(KC_GRV),
+        LSG(KC_A), LSG(KC_V), A(KC_BSPC), _______, A(KC_DEL), LSG(KC_GRV),
 
         _______, _______,
 
-        _______, _______, _______, KC_EQL, S(KC_SLSH), _______,
+        _______, A(KC_LEFT), _______, A(KC_RIGHT), _______, _______,
 
         // Row 5, remaining thumb keys
         _______, _______, _______,
