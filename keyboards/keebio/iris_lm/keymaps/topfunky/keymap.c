@@ -16,9 +16,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_6, KC_7, KC_8, KC_9, KC_0, KC_LBRC,
 
         // Row 2
-        KC_BSPC, KC_QUOT, KC_COMM, MT(MOD_LCTL, KC_DOT), MT(MOD_LALT, KC_P), KC_Y,
+        KC_BSPC, KC_QUOT, KC_COMM, MT(MOD_LCTL, KC_DOT), MT(MOD_LSFT, KC_P), MT(MOD_LALT, KC_Y),
 
-        KC_F, MT(MOD_LALT, KC_G), MT(MOD_LCTL, KC_C), KC_R, KC_L, KC_RBRC,
+        MT(MOD_LALT, KC_F), MT(MOD_LSFT, KC_G), MT(MOD_LCTL, KC_C), KC_R, KC_L, KC_RBRC,
 
         // Row 3
         KC_BSLS, KC_A, KC_O, MT(MOD_LGUI, KC_E), LT(1, KC_U), LT(2, KC_I),
@@ -28,14 +28,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // Row 4, plus top thumb keys
         KC_GRV, KC_SCLN, KC_Q, KC_J, KC_K, KC_X,
 
-        HYPR(KC_NO), MEH(KC_NO),
+        OSM(MOD_HYPR), OSM(MOD_MEH),
 
         KC_B, KC_M, KC_W, KC_V, KC_Z, KC_SLSH,
 
         // Row 5, remaining thumb keys
-        MT(MOD_LALT, KC_TAB), KC_LSFT, KC_ENT,
+        MT(MOD_LALT, KC_TAB), OSM(MOD_LSFT), KC_ENT,
 
-        KC_SPC, KC_RGUI, MO(3)
+        KC_SPC, OSM(MOD_RGUI), OSL(3)
 
             ),
 
@@ -102,22 +102,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         ),
     [_MEDIA] = LAYOUT(
         // Row 1
-        _______, HYPR(KC_ENT), HYPR(KC_LEFT), HYPR(KC_RGHT), C(KC_UP), C(KC_DOWN),
+        KC_VOLU, HYPR(KC_ENT), HYPR(KC_LEFT), HYPR(KC_RGHT), C(KC_UP), C(KC_DOWN),
 
         _______, _______, _______, DT_PRNT, DT_UP, DT_DOWN,
 
         // Row 2
-        _______, _______, _______, _______, _______, _______,
+        KC_VOLD, KC_EXCLAIM, KC_AT, KC_HASH, KC_DOLLAR, KC_PERCENT,
 
-        _______, _______, _______, _______, _______, _______,
+        KC_CIRCUMFLEX, KC_AMPERSAND, KC_ASTERISK, KC_LEFT_PAREN, KC_RIGHT_PAREN, _______,
 
         // Row 3
-        _______, KC_MPRV, KC_MNXT, KC_VOLU, _______, _______,
+        _______, KC_1, KC_2, KC_3, KC_4, KC_5,
 
-        _______, LAG(KC_H), _______, _______, _______, _______,
+        KC_6, KC_7, KC_8, KC_9, KC_0, _______,
 
         // Row 4, plus top thumb keys
-        _______, KC_MSTP, KC_MPLY, KC_VOLD, _______, _______,
+        _______, _______, _______, _______, _______, _______,
 
         _______, _______,
 
