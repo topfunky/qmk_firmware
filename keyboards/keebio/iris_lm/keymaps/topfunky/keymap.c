@@ -64,7 +64,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, A(KC_LEFT), _______, A(KC_RIGHT), _______, _______,
 
         // Row 5, remaining thumb keys
-        _______, _______, _______,
+        _______, _______, G(KC_ENT),
 
         _______, _______, _______
 
