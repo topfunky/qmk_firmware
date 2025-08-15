@@ -35,7 +35,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // Row 5, remaining thumb keys
         MT(MOD_LALT, KC_TAB), OSM(MOD_LSFT), KC_ENT,
 
-        KC_SPC, OSM(MOD_RGUI), OSL(3)
+        KC_SPC, KC_RGUI, OSL(3)
 
             ),
 
