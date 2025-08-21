@@ -33,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_B, KC_M, KC_W, KC_V, KC_Z, KC_SLSH,
 
         // Row 5, remaining thumb keys
-        MT(MOD_LALT, KC_TAB), OSM(MOD_LSFT), KC_ENT,
+        MT(MOD_LALT, KC_TAB), KC_LSFT, KC_ENT,
 
         KC_SPC, KC_RGUI, OSL(3)
 

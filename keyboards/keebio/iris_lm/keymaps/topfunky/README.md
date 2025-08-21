@@ -131,7 +131,7 @@ clang-format -i keyboards/keebio/iris_lm/keymaps/topfunky/keymap.c
 To build this keymap:
 
 ```bash
-qmk compile -kb keebio/iris_lm -km topfunky
+qmk compile -kb keebio/iris_lm/g1 -km topfunky
 ```
 
 ### Author
