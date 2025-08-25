@@ -104,7 +104,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // Row 1
         KC_VOLU, HYPR(KC_ENT), HYPR(KC_LEFT), HYPR(KC_RGHT), C(KC_UP), C(KC_DOWN),
 
-        _______, _______, _______, DT_PRNT, DT_UP, DT_DOWN,
+        G(KC_ENT), _______, _______, DT_PRNT, DT_UP, DT_DOWN,
 
         // Row 2
         KC_VOLD, KC_EXCLAIM, KC_AT, KC_HASH, KC_DOLLAR, KC_PERCENT,
