@@ -21,9 +21,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         MT(MOD_LALT, KC_F), MT(MOD_LSFT, KC_G), MT(MOD_LCTL, KC_C), KC_R, KC_L, KC_RBRC,
 
         // Row 3
-        KC_BSLS, KC_A, KC_O, MT(MOD_LGUI, KC_E), LT(1, KC_U), LT(2, KC_I),
+        KC_BSLS, KC_A, KC_O, MT(MOD_LGUI, KC_E), LT(_LOWER, KC_U), LT(_RAISE, KC_I),
 
-        LT(2, KC_D), LT(1, KC_H), MT(MOD_LGUI, KC_T), KC_N, KC_S, KC_MINS,
+        LT(_RAISE, KC_D), LT(_LOWER, KC_H), MT(MOD_LGUI, KC_T), KC_N, KC_S, KC_MINS,
 
         // Row 4, plus top thumb keys
         KC_GRV, KC_SCLN, KC_Q, KC_J, KC_K, KC_X,
@@ -35,7 +35,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // Row 5, remaining thumb keys
         MT(MOD_LALT, KC_TAB), KC_LSFT, KC_ENT,
 
-        KC_SPC, KC_RGUI, OSL(3)
+        KC_SPC, KC_RGUI, OSL(_MEDIA)
 
             ),
 
