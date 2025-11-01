@@ -166,31 +166,3 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     return state;
 }
 
-// TODO: Debug. Either holds on white or turns off all LEDs.
-// // See https://docs.qmk.fm/features/rgb_matrix#callbacks
-// bool rgb_matrix_indicators_user(void) {
-//     if (keyboard_report->mods & MOD_BIT(KC_LGUI)) {
-//         rgb_matrix_mode(1);
-//         set_rgb_matrix(HSV_WHITE);
-//         return true;
-//     }
-//     rgb_matrix_mode(RGB_MATRIX_CYCLE_LEFT_RIGHT);
-//     return false;
-// }
-
-// // Enable/disable RGB matrix
-// rgb_matrix_enable();
-// rgb_matrix_disable();
-// rgb_matrix_toggle();
-
-// // Set brightness (0-255)
-// rgb_matrix_set_color_all(r, g, b);
-
-// // Set individual LED color
-// rgb_matrix_set_color(led_index, r, g, b);
-
-// // Set HSV color for all LEDs
-// rgb_matrix_sethsv(hue, sat, val);
-
-// // Change animation modes
-// rgb_matrix_mode(mode_number);
