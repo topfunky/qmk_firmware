@@ -131,35 +131,39 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         )};
 
 void keyboard_post_init_user(void) {
-    rgb_matrix_enable_noeeprom(); // enables RGB Matrix, without saving settings
-    rgb_matrix_mode_noeeprom(1);
+    // Enable RGB Matrix without saving to EEPROM
+    rgb_matrix_enable_noeeprom();
+    rgb_matrix_mode_noeeprom(RGB_MATRIX_CYCLE_LEFT_RIGHT);
     layer_state_set_user(layer_state);
 }
 
-void set_rgb_matrix(uint8_t hue, uint8_t sat, uint8_t val) {
-    val = rgb_matrix_get_val();
-    rgb_matrix_sethsv_noeeprom(hue, sat, val);
+/**
+ * @brief Set RGB matrix to a solid color while preserving current brightness
+ * @param hue HSV hue value
+ * @param sat HSV saturation value
+ * @param val HSV value/brightness (unused, brightness is preserved from current setting)
+ */
+static void set_rgb_matrix_solid_color(uint8_t hue, uint8_t sat, uint8_t val) {
+    // Preserve current brightness to maintain user's preferred brightness level
+    (void)val; // Suppress unused parameter warning
+    rgb_matrix_mode_noeeprom(RGB_MATRIX_SOLID_COLOR);
+    rgb_matrix_sethsv_noeeprom(hue, sat, rgb_matrix_get_val());
 }
 
 layer_state_t layer_state_set_user(layer_state_t state) {
     switch (get_highest_layer(state)) {
         case _LOWER:
-            // Must go to mode 1 to set solid color
-            // TODO: Use `noeeprom` variants of the functions
-            rgb_matrix_mode(1);
-            set_rgb_matrix(HSV_CYAN);
+            set_rgb_matrix_solid_color(HSV_CYAN);
             break;
         case _RAISE:
-            rgb_matrix_mode(1);
-            set_rgb_matrix(HSV_GREEN);
+            set_rgb_matrix_solid_color(HSV_GREEN);
             break;
         case _MEDIA:
-            rgb_matrix_mode(1);
-            set_rgb_matrix(HSV_PURPLE);
+            set_rgb_matrix_solid_color(HSV_PURPLE);
             break;
         default:
             // Return to animation on default layer
-            rgb_matrix_mode(RGB_MATRIX_CYCLE_LEFT_RIGHT);
+            rgb_matrix_mode_noeeprom(RGB_MATRIX_CYCLE_LEFT_RIGHT);
             break;
     }
 
