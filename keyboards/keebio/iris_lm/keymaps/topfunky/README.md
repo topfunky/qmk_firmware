@@ -24,11 +24,17 @@ To build this keymap:
 qmk compile -kb keebio/iris_lm/g1 -km topfunky
 ```
 
+### Flash
+
 Output will be in the `.build` directory as `keebio_iris_lm_g1_topfunky` with `bin` or `elf` or `hex` extension.
 
-Open the QMK Toolbox GUI app and flash the `/Users/topfunky/projects/qmk_firmware/.build/keebio_iris_lm_g1_topfunky.bin` file to the keyboard.
+Open the QMK Toolbox GUI app, connect half of the keyboard via USB-C, and click the reset button on the back of the device (use a small screwdriver).
 
-Each half must be flashed (with the same firmware). Plug in the keyboard, tap the reset button on the back (using a screwdriver), and flash with QMK Toolbox.
+Clear the EEPROM by using the clear button in QMK Toolbox or flash with the clearing [bin file[(https://raw.githubusercontent.com/keebio/keebio-firmware/master/stm32f072_clear_flash.bin) linked from [Keeb.io docs](https://docs.keeb.io/reset-eeprom).
+
+Then flash the `/Users/topfunky/projects/qmk_firmware/.build/keebio_iris_lm_g1_topfunky.bin` file to the keyboard.
+
+Each half must be flashed (with the same firmware).
 
 ## Features
 
