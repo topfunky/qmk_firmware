@@ -44,24 +44,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // Row 1
         A(KC_D), S(KC_1), S(KC_2), S(KC_3), S(KC_4), S(KC_5),
 
-        S(KC_6), S(KC_7), S(KC_8), S(KC_9), S(KC_0), KC_PGUP,
+        S(KC_6), S(KC_7), S(KC_8), S(KC_9), S(KC_0), S(KC_LBRC),
 
         // Row 2
         KC_DEL, A(KC_Y), LSG(KC_LBRC), LSG(KC_A), LSG(KC_RBRC), G(KC_TAB),
 
-        KC_PGUP, C(KC_A), KC_UP, C(KC_E), S(KC_EQL), KC_PGDN,
+        KC_PGUP, C(KC_A), KC_UP, C(KC_E), S(KC_EQL), S(KC_RBRC),
 
         // Row 3
-        LSG(KC_S), LSG(KC_H), KC_BSPC, KC_TAB, KC_DEL, G(KC_SPC),
+        S(KC_BSLS), _______, KC_BSPC, KC_TAB, KC_DEL, G(KC_SPC),
 
-        KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC_EQL, _______,
+        KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC_EQL, S(KC_MINS),
 
         // Row 4, plus top thumb keys
-        LSG(KC_A), LSG(KC_V), A(KC_BSPC), _______, A(KC_DEL), LSG(KC_GRV),
+        S(KC_GRV), S(KC_SCLN), A(KC_BSPC), _______, A(KC_DEL), LSG(KC_GRV),
 
         _______, _______,
 
-        _______, A(KC_LEFT), _______, A(KC_RIGHT), _______, _______,
+        _______, A(KC_LEFT), _______, A(KC_RIGHT), _______, S(KC_SLSH),
 
         // Row 5, remaining thumb keys
         _______, _______, G(KC_ENT),
@@ -83,12 +83,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, C(KC_C), A(KC_UP), C(KC_R), KC_NO, KC_NO,
 
         // Row 3
-        _______, _______, A(KC_BSPC), G(KC_Z), A(KC_DEL), _______,
+        LSG(KC_S), LSG(KC_H), A(KC_BSPC), G(KC_Z), A(KC_DEL), _______,
 
         _______, A(KC_LEFT), A(KC_DOWN), A(KC_RGHT), _______, _______,
 
         // Row 4, plus top thumb keys
-        _______, _______, _______, _______, _______, _______,
+        LSG(KC_A), LSG(KC_V), _______, _______, _______, _______,
 
         _______, _______,
 
