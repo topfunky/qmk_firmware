@@ -36,6 +36,28 @@ Then flash the `/Users/topfunky/projects/qmk_firmware/.build/keebio_iris_lm_g1_t
 
 Each half must be flashed (with the same firmware).
 
+## Visualization
+
+Render a visualization of the keymap with the [keymap-drawer](https://github.com/caksoylar/keymap-drawer?tab=readme-ov-file) tool.
+
+Install `keymap-drawer`.
+
+```nu
+pipx install keymap-drawer
+```
+
+Convert the keymap C file to YAML.
+
+```nu
+qmk c2json keyboards/keebio/iris_lm/keymaps/topfunky/keymap.c | keymap parse -c 10 -q - | save sweep_keymap.yaml
+```
+
+Render to SVG.
+
+```nu
+keymap draw sweep_keymap.yaml | save sweep_keymap.svg
+```
+
 ## Features
 
 ### Layout
