@@ -1,0 +1,194 @@
+layout: {qmk_keyboard: keebio/iris_lm/g1, layout_name: LAYOUT}
+layers:
+  L0:
+  - [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9']
+  - - '0'
+    - '['
+    - BSPC
+    - ''''
+    - ','
+    - {t: ., h: MOD_LCTL}
+    - {t: P, h: MOD_LSFT}
+    - {t: Y, h: MOD_LALT}
+    - {t: F, h: MOD_LALT}
+    - {t: G, h: MOD_LSFT}
+  - - {t: C, h: MOD_LCTL}
+    - R
+    - L
+    - ']'
+    - \
+    - A
+    - O
+    - {t: E, h: MOD_LGUI}
+    - LT( LOWER,U)
+    - LT( RAISE,I)
+  - - LT( RAISE,D)
+    - LT( LOWER,H)
+    - {t: T, h: MOD_LGUI}
+    - N
+    - S
+    - '-'
+    - '`'
+    - ;
+    - Q
+    - J
+  - - K
+    - X
+    - {t: HYPR, h: sticky}
+    - {t: MEH, h: sticky}
+    - B
+    - M
+    - W
+    - V
+    - Z
+    - /
+  - - {t: TAB, h: MOD_LALT}
+    - LSFT
+    - ENT
+    - SPC
+    - RGUI
+    - OSL( MEDIA)
+  L1:
+  - [Alt+D, Sft+1, Sft+2, Sft+3, Sft+4, Sft+5, Sft+6, Sft+7, Sft+8, Sft+9]
+  - [Sft+0, 'Sft+[', DEL, Alt+Y, 'Sft+Gui+[', Sft+Gui+A, 'Sft+Gui+]', Gui+TAB, PGUP, Ctl+A]
+  - - UP
+    - Ctl+E
+    - Sft+=
+    - Sft+]
+    - Sft+\
+    - {t: ▽, type: trans}
+    - BSPC
+    - TAB
+    - DEL
+    - Gui+SPC
+  - - PGDN
+    - LEFT
+    - DOWN
+    - RGHT
+    - '='
+    - Sft+-
+    - Sft+`
+    - Sft+;
+    - Alt+BSPC
+    - {t: ▽, type: trans}
+  - - Alt+DEL
+    - Sft+Gui+`
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - Alt+LEFT
+    - {t: ▽, type: trans}
+    - Alt+RIGHT
+    - {t: ▽, type: trans}
+    - Sft+/
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - Gui+ENT
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  L2:
+  - - {t: ▽, type: trans}
+    - F1
+    - F2
+    - F3
+    - F4
+    - F5
+    - F6
+    - F7
+    - F8
+    - F9
+  - - F10
+    - F11
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - Ctl+C
+  - - Alt+UP
+    - Ctl+R
+    - ''
+    - ''
+    - Sft+Gui+S
+    - Sft+Gui+H
+    - Alt+BSPC
+    - Gui+Z
+    - Alt+DEL
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - Alt+LEFT
+    - Alt+DOWN
+    - Alt+RGHT
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - Sft+Gui+A
+    - Sft+Gui+V
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  L3:
+  - - VOLU
+    - Hyper+ENT
+    - Hyper+LEFT
+    - Hyper+RGHT
+    - Ctl+UP
+    - Ctl+DOWN
+    - Gui+ENT
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - DT PRNT
+  - [DT UP, DT DOWN, VOLD, '!', '@', '#', $, '%', ^, '&']
+  - - '*'
+    - (
+    - )
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+  - - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '0'
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - Alt+Gui+H
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
