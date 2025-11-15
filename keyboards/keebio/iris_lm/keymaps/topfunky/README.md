@@ -134,6 +134,11 @@ To build this keymap:
 qmk compile -kb keebio/iris_lm/g1 -km topfunky
 ```
 
+Output will be in the `.build` directory as `keebio_iris_lm_g1_topfunky` with `bin` or `elf` or `hex` extension.
+
+Open the QMK Toolbox GUI app and flash the `/Users/topfunky/projects/qmk_firmware/.build/keebio_iris_lm_g1_topfunky.bin` file to the keyboard.
+
+
 ### Author
 
 Geoffrey Grosenbach (@topfunky) - 2025
